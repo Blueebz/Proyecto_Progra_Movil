@@ -25,6 +25,10 @@ const routes: Routes = [
         loadChildren: () => import('../compras/compras.module').then( m => m.ComprasPageModule)
       },
       {
+        path: 'menu',
+        loadChildren: () => import('../menu/menu.module').then( m => m.MenuPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tablinks/inicio',
         pathMatch: 'full'

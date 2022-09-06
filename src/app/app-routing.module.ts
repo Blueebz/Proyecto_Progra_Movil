@@ -5,9 +5,6 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tablinks/tablinks.module').then( m => m.TablinksPageModule)
-  },  {
-    path: 'compras',
-    loadChildren: () => import('./compras/compras.module').then( m => m.ComprasPageModule)
   },
 
 ];
