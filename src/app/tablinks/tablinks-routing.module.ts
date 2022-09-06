@@ -28,7 +28,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '/tablinks/perfil',
+    path: '',
     redirectTo: '/tablinks/perfil',
     pathMatch: 'full'
   },
