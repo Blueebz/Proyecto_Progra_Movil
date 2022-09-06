@@ -21,15 +21,19 @@ const routes: Routes = [
         loadChildren: () => import('../configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
       },
       {
+        path: 'compras',
+        loadChildren: () => import('../compras/compras.module').then( m => m.ComprasPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tablinks/perfil',
+        redirectTo: '/tablinks/inicio',
         pathMatch: 'full'
       },
     ]
   },
   {
     path: '',
-    redirectTo: '/tablinks/perfil',
+    redirectTo: '/tablinks/inicio',
     pathMatch: 'full'
   },
 
