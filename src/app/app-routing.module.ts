@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tablinks/tablinks.module').then( m => m.TablinksPageModule)
+  },  {
+    path: 'videojuegos',
+    loadChildren: () => import('./videojuegos/videojuegos.module').then( m => m.VideojuegosPageModule)
   },
+
 
 ];
 

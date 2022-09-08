@@ -29,6 +29,11 @@ const routes: Routes = [
         loadChildren: () => import('../menu/menu.module').then( m => m.MenuPageModule)
       },
       {
+        path: 'videojuegos',
+        loadChildren: () => import('../videojuegos/videojuegos.module').then( m => m.VideojuegosPageModule)
+      },
+    
+      {
         path: '',
         redirectTo: '/tablinks/inicio',
         pathMatch: 'full'
