@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'videojuegos',
         loadChildren: () => import('../videojuegos/videojuegos.module').then( m => m.VideojuegosPageModule)
       },
+      {
+        path: 'juegomesa',
+        loadChildren: () => import('../juegomesa/juegomesa.module').then( m => m.JuegomesaPageModule)
+      },
     
       {
         path: '',
