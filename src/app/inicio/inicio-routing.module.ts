@@ -6,8 +6,19 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage
-  }
+    component: InicioPage,
+    children:[
+      {
+        path: 'perfil',
+        loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilPageModule)
+      },
+    ]
+  },
+  {
+    path: '',
+    redirectTo: '/inicio',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
