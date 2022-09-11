@@ -36,7 +36,18 @@ const routes: Routes = [
         path: 'juegomesa',
         loadChildren: () => import('../juegomesa/juegomesa.module').then( m => m.JuegomesaPageModule)
       },
-    
+      {
+        path: 'figuras',
+        loadChildren: () => import('../figuras/figuras.module').then( m => m.FigurasPageModule)
+      },
+      {
+        path: 'preguntas',
+        loadChildren: () => import('../preguntas/preguntas.module').then( m => m.PreguntasPageModule)
+      },
+      {
+        path: 'nosotros',
+        loadChildren: () => import('../nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+      },
       {
         path: '',
         redirectTo: '/tablinks/inicio',
