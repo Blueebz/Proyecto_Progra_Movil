@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 import { TablinksPage } from './tablinks.page';
 
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: 'nosotros',
         loadChildren: () => import('../nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+      },
+      {
+        path: 'mis-compras',
+        loadChildren: () => import('../mis-compras/mis-compras.module').then(m => m.MisComprasPageModule)
       },
       {
         path: '',
