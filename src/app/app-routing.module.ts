@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'mis-compras',
     loadChildren: () => import('./mis-compras/mis-compras.module').then( m => m.MisComprasPageModule)
   },
+  {
+    path: 'misdatos',
+    loadChildren: () => import('./misdatos/misdatos.module').then( m => m.MisdatosPageModule)
+  },
 
   
 
