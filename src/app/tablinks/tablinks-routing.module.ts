@@ -58,6 +58,10 @@ const routes: Routes = [
         loadChildren: () => import('../misdatos/misdatos.module').then(m => m.MisdatosPageModule)
       },
       {
+        path:'ajustes',
+        loadChildren: () => import('../ajustes/ajustes.module').then(m => m.AjustesPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tablinks/inicio',
         pathMatch: 'full'
