@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-videojuegos',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideojuegosPage implements OnInit {
 
-  constructor() { }
+  constructor(private db: Storage) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    let obj = {
+      game: "God of War",
+      precio : 40000,
+      vendido: false,
+      stock: 10
+    }
+
+    await this.db.set("games", obj);
   }
 
 }
