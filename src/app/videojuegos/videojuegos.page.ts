@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 
+
 @Component({
   selector: 'app-videojuegos',
   templateUrl: './videojuegos.page.html',
@@ -18,7 +19,9 @@ export class VideojuegosPage implements OnInit {
       stock: 10
     }
 
-    await this.db.set("games", obj);
-  }
+    await this.db.set("games", obj)
+
+    
+  };
 
 }
