@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage-angular';
+
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor(private midb : Storage) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.midb.get("games").then((value) => {
+      console.log(value);
+
+    });
   }
+  
 
 }
