@@ -16,6 +16,15 @@ export class InicioPage implements OnInit {
       console.log(value);
 
     });
+    await this.midb.get("mesa").then((value) => {
+      console.log(value);
+
+    });
+    await this.midb.get("figura").then((value) => {
+      console.log(value);
+
+    });
+    
   }
   
 
