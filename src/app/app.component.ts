@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Storage } from '@ionic/storage-angular';
+import { MiapicitaService } from './api/miapicita.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,9 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private db : Storage) {
-    
+  constructor(private api : MiapicitaService) {
   }
   async ngOnInit(){
-    await this.db.create();
+    await this.api.getProductos();
   }
-
 }
