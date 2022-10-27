@@ -1,9 +1,5 @@
 from flask import Flask, request, jsonify
 from flask_migrate import Migrate
-<<<<<<< HEAD
-from models import db, Cliente, Producto, Venta
-from flask_cors import CORS, cross_origin
-=======
 from model import db, Producto
 from flask_cors import CORS, cross_origin
 
@@ -81,4 +77,3 @@ def addProducto():
     Producto.save(producto)
 
     return jsonify(producto.serialize()),200
->>>>>>> vilaza_prueba
